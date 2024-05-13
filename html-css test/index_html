@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ismaheel's One Page Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome Ismaheel's One Page Website</h1>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p> My name is Adegoke Ismaheel,I was born in Lagos state but moved to Ibadan in 2016,where i now reside at the moment. 
+                I graduated from Olabisi Onaanjo University studied "Guidance and counselling" in University.</p>
+        </section>
+        <section id="hobbies">
+            <h2>My Hobbies</h2>
+            <p>My hobbies are quite basic for a random individual like myself.</p>
+            <ul>
+                <p>list of hobbies</p>
+                <li>watching and playing football</li>
+                <li>jamming music</li>
+                <li>watching anime and documentaries on youutube</li>
+                <li>eatiing</li>         
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright © 2024 Ismaheel's One Page Website</p>
+    </footer>
+</body>
+</html>
