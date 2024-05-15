@@ -1,0 +1,44 @@
+1
+Synchronous JavaScript means that the code is executed line by line, and each line must finish executing before moving on to the next one. It's like waiting in a queue, where you can't proceed until the person in front of you finishes. 
+On the other hand, asynchronous JavaScript allows code to run simultaneously without waiting for each line to finish executing. It's like multitasking, where you can do multiple things at once.
+2
+Promises in JavaScript are a way to handle asynchronous operations. They provide a cleaner and more structured approach compared to traditional callbacks.
+Callbacks are functions that are passed as arguments to other functions and are called once a certain task is completed. They can lead to callback hell, where nested callbacks become hard to read and maintain.
+Promises, on the other hand, represent the eventual completion of an asynchronous operation and provide a more organized way to handle asynchronous code. Promises have three states: pending, fulfilled, and rejected.
+To handle Promise chaining, you can use the `then()` method. Each `then()` callback receives the resolved value from the previous Promise.
+Error handling in Promises is typically done using the `catch()` method at the end of the chain. If any Promise in the chain is rejected, the control jumps to the nearest `catch()` callback.
+Promises provide a more structured and readable way to handle asynchronous operations and avoid callback 
+3
+`var` is the oldest way to declare variables in JavaScript. It has function scope, meaning the variable is accessible within the function it's defined in or globally if not defined within a function. It can be redeclared and reassigned. However, it can lead to some unexpected behavior due to hoisting.
+`let` was introduced in ES6 and has block scope. It means the variable is only accessible within the block it's defined in, like within a loop or an if statement. It can be reassigned but not redeclared within the same scope.
+`const` is also introduced in ES6 and has block scope like `let`. The difference is that `const` variables are read-only and cannot be reassigned once they are defined. However, it's important to note that `const` does not make objects or arrays immutable.
+Summarily,
+- Use `var` for variables that need to have function scope.
+- Use `let` for variables that need to have block scope and may be reassigned.
+- Use `const` for variables that need to have block scope and should not be reassigned.
+4
+Arrow functions in JavaScript are a more concise way to write function expressions. They have a different syntax compared to traditional function expressions and offer some advantages.
+The main difference is that arrow functions do not bind their own `this` value. Instead, they inherit the `this` value from the surrounding context. This can be helpful in avoiding confusion and maintaining the correct `this` context, especially when dealing with nested functions or callbacks.
+In the traditional function expression, `this` is determined by how the function is called. But in arrow functions, `this` is lexically scoped, meaning it is based on where the arrow function is defined.
+Advantages of using arrow functions include:
+1. Concise syntax: Arrow functions have a shorter syntax compared to traditional function expressions, making the code more readable and reducing the need for explicit `return` statements for single-line functions.
+2. No binding of `this`: Arrow functions inherit the `this` value from the surrounding context, which can help avoid confusion and simplify code.
+However, it's important to note that arrow functions also have some limitations, such as not being able to be used as constructors or having their own `arguments` object.
+5
+
+6
+In JavaScript, there are different ways to create objects. Let's compare and contrast three common approaches: object literals, constructor functions, and ES6 classes.
+1. Object Literals:
+Object literals are a simple and concise way to create objects. You define an object directly using curly braces `{}` and specify its properties and methods.
+Object literals are great for creating individual objects quickly and easily.
+2. Constructor Functions:
+Constructor functions are traditional functions used to create objects. You define a function and use the `new` keyword to create instances of the object.
+Constructor functions allow you to define a blueprint for creating multiple similar objects.
+3. ES6 Classes:
+ES6 introduced the `class` syntax, which provides a more structured way to create objects. Under the hood, classes still use constructor functions.
+ES6 classes provide a cleaner syntax for defining objects and their methods, making the code more readable.
+All three approaches can be used to achieve the same result of creating objects in JavaScript. The choice depends on your preference and the specific needs of your project.
+7
+In JavaScript, the `==` and `===` operators are used for comparison, but they have some differences.
+The `==` operator, also known as the equality operator, compares the values on both sides of the operator and performs type coercion if necessary. This means that it tries to convert the values to a common type before making the comparison.
+On the other hand, the `===` operator, also known as the strict equality operator, not only compares the values but also checks for the same type. It does not perform type coercion. It's generally recommended to use the `===` operator (strict equality) because it avoids unexpected results due to type coercion. It provides a more precise and predictable comparison. However, there may be cases where you intentionally want to allow type coercion, and in those situations, you can use the `==` operator (equality).
